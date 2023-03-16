@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Pong Game</title>
-		<style>
-			canvas {
-				border: 1px solid black;
-			}
-		</style>
-	</head>
-	<body>
-		<canvas id="canvas"></canvas>
-		<script src="script.js"></script>
-	</body>
+<head>
+	<title>JPCANILHO</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000;
+			background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg');
+			background-size: cover;
+			background-position: center center;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+		}
+		.container {
+			padding: 20px;
+			text-align: center;
+			color: #fff;
+		}
+		h1 {
+			font-size: 48px;
+			margin: 0;
+		}
+		p {
+			font-size: 24px;
+			margin: 20px 0;
+		}
+		button {
+			padding: 12px 24px;
+			font-size: 20px;
+			border-radius: 4px;
+			background-color: #fff;
+			color: #000;
+			border: none;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #000;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>J P Canilho</h1>
+		<p>This is a demo page with a dynamic space background</p>
+		<button>Learn More</button>
+	</div>
+	<div id="particles-js"></div>
+</body>
+<script src="particles.js"></script>
+
 </html>
