@@ -1,59 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Single Line Storage</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        text-align: center;
-      }
-      #input-field {
-        font-size: 24px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        margin: 20px;
-        width: 300px;
-        max-width: 100%;
-      }
-      #submit-button {
-        font-size: 24px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        background-color: #4CAF50;
-        color: white;
-        cursor: pointer;
-      }
-      #submit-button:hover {
-        background-color: #3E8E41;
-      }
-      #result {
-        font-size: 24px;
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Single Line Storage</h1>
-    <p>Enter a single line of information:</p>
-    <input type="text" id="input-field" placeholder="Enter your text here">
-    <button id="submit-button">Save</button>
-    <div id="result"></div>
-    <script>
-      var inputField = document.getElementById('input-field');
-      var submitButton = document.getElementById('submit-button');
-      var resultDiv = document.getElementById('result');
+<head>
+	<title>Dynamic Background</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="background"></div>
 
-      submitButton.addEventListener('click', function() {
-        localStorage.setItem('storedText', inputField.value);
-        resultDiv.textContent = 'Your text has been stored: ' + localStorage.getItem('storedText');
-      });
-
-      var storedText = localStorage.getItem('storedText');
-      if (storedText) {
-        resultDiv.textContent = 'Your stored text is: ' + storedText;
-      }
-    </script>
-  </body>
+	<script src="script.js"></script>
+</body>
 </html>
