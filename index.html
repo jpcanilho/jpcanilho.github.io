@@ -29,18 +29,27 @@
         </div>
     </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Let's get in touch! Send me an email at <a href="mailto:your@email.com">your@email.com</a>.</p>
-        </div>
-    </section>
+ <section id="works">
+    <div class="container">
+        <h2>Works</h2>
+        <!-- ... (existing work items) ... -->
+    </div>
+</section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
-        </div>
-    </footer>
+<section id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Let's get in touch! Send me an email at <a href="mailto:your@email.com">your@email.com</a>.</p>
+    </div>
+</section>
+
+<button id="runawayButton">Run Away!</button>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </div>
+</footer>
 
 <!-- ... (previous HTML code) ... -->
 
@@ -62,6 +71,23 @@
             color += letters[Math.floor(Math.random() * 16)];
         }
         return color;
+    }
+</script>
+<script>
+    var runawayButton = document.getElementById('runawayButton');
+
+    document.addEventListener('mousemove', function(event) {
+        moveButton(event);
+    });
+
+    function moveButton(event) {
+        // Calculate the new position of the button
+        var newX = event.clientX - runawayButton.clientWidth / 2;
+        var newY = event.clientY - runawayButton.clientHeight / 2;
+
+        // Update the button's position
+        runawayButton.style.left = newX + 'px';
+        runawayButton.style.top = newY + 'px';
     }
 </script>
 
