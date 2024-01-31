@@ -8,12 +8,14 @@
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Your Name</h1>
-            <p>Web Developer & Designer</p>
-        </div>
-    </header>
+
+	<header>
+    <div class="container">
+        <h1>Your Name</h1>
+        <p>Web Developer & Designer</p>
+        <button id="colorButton">Change Color</button>
+    </div>
+	</header>
 
     <section id="works">
         <div class="container">
@@ -40,5 +42,29 @@
         </div>
     </footer>
 
+<!-- ... (previous HTML code) ... -->
+
+<script>
+    document.getElementById('colorButton').addEventListener('click', function() {
+        changeHeaderColor();
+    });
+
+    function changeHeaderColor() {
+        var header = document.querySelector('header');
+        var randomColor = getRandomColor();
+        header.style.backgroundColor = randomColor;
+    }
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+</script>
+
 </body>
 </html>
+
